@@ -5,7 +5,7 @@ for i in range (basenum, 26) :
     squares.append(i)
 random.shuffle(squares)
 for x in squares:
-    responce=int(input("What is the square root"+str (x*x) +"?"))
+    responce=int(input("What is the square root of "+str (x*x) +"?"))
     answer=x
 if responce==answer:
     print("Correct")
