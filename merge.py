@@ -1,6 +1,9 @@
 import random
 basenum=int(input("Bottom num to study"))
 squares=[]
+correct=[]
+incorrect=[]
+incorrect_internal=[]
 for i in range(basenum, 26):
     squares.append(i)
 for i in range(basenum+25, 51):
@@ -13,6 +16,7 @@ for x in squares:
         answer=x
         if responce==answer:
             print("Correct")
+            correct.append(answer*answer)
         else:
             print("Incorrect it is "+str(answer))
     else:
