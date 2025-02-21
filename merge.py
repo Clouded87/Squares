@@ -3,11 +3,12 @@ basenum=int(input("Bottom num to study"))
 squares=[]
 for i in range(basenum, 26):
     squares.append(i)
-for i in range(basenum-25, 51):
+for i in range(basenum+25, 51):
     squares.append(i)
 random.shuffle(squares)
 for x in squares:
-    if x<25:
+    if x>25:
+        x=x-25
         responce=int(input("What is the square root of "+str (x*x) +"?"))
         answer=x
         if responce==answer:
@@ -20,4 +21,4 @@ for x in squares:
         if responce==answer:
             print("Correct")
         else:
-            print("Incorrect")  
+            print("Incorrect it is "+str(answer))  
