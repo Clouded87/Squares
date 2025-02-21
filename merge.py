@@ -16,13 +16,20 @@ for x in squares:
         answer=x
         if responce==answer:
             print("Correct")
-            correct.append(answer*answer)
+            correct.append(x*x)
         else:
             print("Incorrect it is "+str(answer))
+            incorrect_internal.append(x+25)
+            incorrect.append(x*x)
     else:
         responce=int(input("What is "+str(x)+" squared?"))
         answer=int(x)*int(x)
         if responce==answer:
             print("Correct")
+            correct.append(x)
         else:
-            print("Incorrect it is "+str(answer))  
+            print("Incorrect it is "+str(answer))
+            incorrect.append(x)
+            incorrect_internal.append(x)
+print(incorrect)
+print(correct)
