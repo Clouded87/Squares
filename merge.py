@@ -31,5 +31,4 @@ for x in squares:
             print("Incorrect it is "+str(answer))
             incorrect.append(x)
             incorrect_internal.append(x)
-print(incorrect)
-print(correct)
+print(incorrect_internal)
