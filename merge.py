@@ -1,3 +1,4 @@
+#I know 0-16, 20, 25
 import random
 basenum=int(input("Bottom num to study"))
 squares=[]
