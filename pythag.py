@@ -1,25 +1,16 @@
 import random
-triple1=""
-triple2=""
-triple3=""
-triple4=""
-triple5=""
-triple6=""
-triple7=""
-triples=[triple1, triple2, triple3, triple4, triple5, triple6, triple7]
-#yn=random.randint(0,1)
-yn=0
-if yn==0:
-    triple=str(str(random.randint(0, 20))+", "+str(random.randint(0, 20))+", "+str(random.randint(0, 20)))
-#else:
-#    random.shuffle(triples)
-#    triple=triples[0]
-split=triple.split(" ,")
-mult_val=random.randint(1, 10)
-print_list=[]
-for i in split:
-    print(i)
-    i=triples[i]*mult_val
-    print_list.append(str(i))
-print_value=", ".join(print_list)
-print(print_value)
+yesorno=0#random.randint(0,1)
+finalset=[]
+set1="3-4-5"
+set2="1-1√3-2"
+set3="1-1-1√2"
+setlist=[set1, set2, set3]
+if yesorno==0:
+    set=random.randint(0, 2)
+    chosenset=setlist[set]
+    chosenset=chosenset.split("-")
+    multiple=random.randint(1, 15)
+    for i in range(chosenset):
+        newitem=str(int(chosenset[i])*multiple)
+        finalset.append(newitem)
+    print(chosenset)
