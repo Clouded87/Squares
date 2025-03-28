@@ -25,3 +25,20 @@ if yesorno==1:
         fakeitem=random.randint(1, 17)*multiple
         fakelist.append(fakeitem)
     print(fakelist)
+x=input("Is this a triple?(y/n)")
+if yesorno==0:
+    if x=="y":
+        print("Correct")
+    if x=="n":
+        print("Incorrect")
+    for i in range(0, 3):
+        x=input("What is the "+str(i+1)+" digit")
+        if x==chosenset[i]:
+            print("Correct")
+        elif x!=chosenset[i]:
+            print("Incorrect")
+elif yesorno==1:
+    if x=="y":
+        print("Incorrect")
+    if x=="n":
+        print("Correct")
