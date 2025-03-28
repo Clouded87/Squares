@@ -4,12 +4,16 @@ finalset=[]
 set1=["3", "4", "5"]
 set2=["1", "1√3", "2"]
 set3=["1", "1", "1√2"]
+set4=["5", "12", "13"]
+set5=["8", "15", "17"]
+set6=["7", "24", "25"]
+set7=["1", "2", "1√5"]
 setlist=[set1, set2, set3]
 newitem=0
 fakelist=[]
 multiple=random.randint(1, 15)
 if yesorno==0:
-    set=random.randint(0, 2)
+    set=random.randint(0, 6)
     chosenset=setlist[set]
     for i in chosenset:
         newset=i.split("√")
