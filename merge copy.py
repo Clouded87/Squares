@@ -29,11 +29,18 @@ squarescube.append(squares)
 def practice():
     global squares, cubes, squarescube, correctcube, incorrectcube, incorrectcube_internal, basenum, basenumcube, correct, incorrect, incorrect_internal
     randomchoice = 0
-    for x in len(squarescube[0])+len(squarescube[1]):
-        if len(squarescube) == 2:
+    for y in range(len(squarescube[0]) + len(squarescube[1])):
+        has_cubes = len(squarescube[0]) > 0
+        has_squares = len(squarescube[1]) > 0
+        if has_cubes and has_squares:
             randomchoice = random.randint(0, 1)
+        elif has_cubes:
+            randomchoice = 0
+        elif has_squares:
+            randomchoice = 1
         else:
-            pass
+            # nothing left to ask
+            break
         if randomchoice == 0:
             x=squarescube[0][0]
             squarescube[0].remove(x)
@@ -58,9 +65,7 @@ def practice():
                     print("Incorrectcube it is "+str(answer))
                     incorrectcube.append(str(x)+" cubed")
                     incorrectcube_internal.append(x)
-            if len(squarescube[0]) == 0:
-                squarescube.pop(0)
-                randomchoice = 1
+            # no need to modify the outer list; selection logic above
         if randomchoice == 1:
             x=squarescube[1][0]
             squarescube[1].remove(x)
@@ -85,5 +90,6 @@ def practice():
                     print("Incorrect it is "+str(answer))
                     incorrect.append(str(x)+" squared")
                     incorrect_internal.append(x)
+                
 
 practice()
