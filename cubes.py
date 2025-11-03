@@ -22,7 +22,7 @@ def practice():
                 correct.append("Cube root of "+str(x*x*x))
             else:
                 print("Incorrect it is "+str(answer))
-                incorrect_internal.append(x+25)
+                incorrect_internal.append(x+10)
                 incorrect.append("Cube root of "+str(x*x*x))
         else:
             responce=int(input("What is "+str(x)+" cubed?"))
